@@ -89,6 +89,8 @@ Returns a list of the two-letter country codes, sorted by the sort order.
   } 
 }
 
+1;
+
 __DATA__
 AU Australia com.au AUD 1
 BR Brazil com.br BRL 2

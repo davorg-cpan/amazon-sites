@@ -72,3 +72,5 @@ Returns the sort order.
 
   method sort     { return $sort }
 }
+
+1;
