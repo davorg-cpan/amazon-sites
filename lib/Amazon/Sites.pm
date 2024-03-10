@@ -1,12 +1,60 @@
+=head1 NAME
+
+Amazon::Sites - A class to represent Amazon sites
+
+=head1 SYNOPSIS
+
+  use Amazon::Sites;
+
+  my $sites = Amazon::Sites->new;
+  my @sites = $sites->sites;
+  my %sites = $sites->sites_hash;
+  my $site  = $sites->site('UK');
+  my @codes = $sites->codes;
+
+=head1 DESCRIPTION
+
+A simple class that encapsulates information about Amazon sites.
+
+=cut
+
 use Feature::Compat::Class;
+
+our $VERSION = '0.0.1';
 
 class Amazon::Sites {
   use Amazon::Site;
 
   field %sites = _init_sites();
 
+=head1 METHODS
+
+=head2 new
+
+Creates a new Amazon::Sites object.
+
+=head2 sites_hash
+
+Returns a hash where the keys are the two-letter country codes and the values are
+L<Amazon::Site> objects.
+
+=cut
+
   method sites_hash { return %sites }
+
+=head2 site($code)
+
+Given a two-letter country code, returns the corresponding L<Amazon::Site> object.
+
+=cut
+
   method site($code) { return $sites{$code} }
+
+=head2 sites
+
+Returns a list of L<Amazon::Site> objects, sorted by the sort order.
+
+=cut
 
   method sites {
     my @sites = sort {
@@ -29,6 +77,16 @@ class Amazon::Sites {
 
     return %sites;
   }
+
+=head2 codes
+
+Returns a list of the two-letter country codes, sorted by the sort order.
+
+=cut
+
+  method codes {
+    return sort keys %sites;
+  } 
 }
 
 __DATA__
