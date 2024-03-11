@@ -9,12 +9,13 @@ Amazon::Site - A class to represent an Amazon site
   my $site = Amazon::Site->new(
     code     => 'UK',
     country  => 'United Kingdom',
-    domain   => 'co.uk',
+    tldn     => 'co.uk',
     currency => 'GBP',
     sort     => 1,
   );
 
-  print $site->domain; # co.uk
+  print $site->tldn;   # co.uk
+  print $site->domain; # amazon.co.uk
 
 =cut
 
@@ -23,7 +24,7 @@ use Feature::Compat::Class;
 class Amazon::Site {
   field $code :param;
   field $country :param;
-  field $domain :param;
+  field $tldn :param;
   field $currency :param;
   field $sort :param;
 
@@ -48,13 +49,21 @@ Returns the country name.
 =cut
   method country  { return $country }
 
-=head2 domain
+=head2 tldn
 
-Returns the domain name.
+Returns the top-level domain name.
 
 =cut
 
-  method domain   { return $domain }
+  method tldn     { return $tldn }
+
+=head2 domain
+
+Return the whole domain name.
+
+=cut
+
+  method domain   { return "amazon.$tldn" }
 
 =head2 currency
 

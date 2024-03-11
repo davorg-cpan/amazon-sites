@@ -66,7 +66,7 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
 
   sub _init_sites {
     my %sites;
-    my @cols = qw[code country domain currency sort];
+    my @cols = qw[code country tldn currency sort];
 
     while (<main::DATA>) {
       chomp;
