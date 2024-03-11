@@ -20,6 +20,8 @@ A simple class that encapsulates information about Amazon sites.
 
 use Feature::Compat::Class;
 
+use experimental 'signatures';
+
 our $VERSION = '0.0.1';
 
 class Amazon::Sites {
