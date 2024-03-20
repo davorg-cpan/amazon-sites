@@ -21,6 +21,8 @@ Amazon::Site - A class to represent an Amazon site
 
 use Feature::Compat::Class;
 
+use feature 'signatures';
+
 class Amazon::Site {
   field $code :param;
   field $country :param;

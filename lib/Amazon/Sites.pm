@@ -24,7 +24,7 @@ A simple class that encapsulates information about Amazon sites.
 
 use Feature::Compat::Class;
 
-use experimental 'signatures';
+use feature 'signatures';
 
 our $VERSION = '0.0.1';
 
