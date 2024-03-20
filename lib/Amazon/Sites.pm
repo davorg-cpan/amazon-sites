@@ -25,6 +25,7 @@ A simple class that encapsulates information about Amazon sites.
 use Feature::Compat::Class;
 
 use feature 'signatures';
+no warnings 'experimental::signatures';
 
 our $VERSION = '0.0.1';
 
@@ -54,7 +55,7 @@ Given a two-letter country code, returns the corresponding L<Amazon::Site> objec
 
 =cut
 
-  method site($code) { return $sites{$code} }
+  method site ($code) { return $sites{$code} }
 
 =head2 sites
 
