@@ -1,0 +1,6 @@
+.git/*
+blib/*
+.vscode/*
+Amazon-Sites-*.tar.gz
+Amazon-Sites-*/*
+.bak

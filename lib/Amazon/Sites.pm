@@ -9,8 +9,12 @@ Amazon::Sites - A class to represent Amazon sites
   my $sites = Amazon::Sites->new;
   my @sites = $sites->sites;
   my %sites = $sites->sites_hash;
-  my $site  = $sites->site('UK');
   my @codes = $sites->codes;
+
+  my $site  = $sites->site('UK');
+  say $site->currency; # GBP
+  say $site->tldr;     # co.uk
+  # etc
 
 =head1 DESCRIPTION
 
