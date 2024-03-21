@@ -77,7 +77,7 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
     my %sites;
     my @cols = qw[code country tldn currency sort];
 
-    while (<main::DATA>) {
+    while (<DATA>) {
       chomp;
       my %site;
       @site{@cols} = split;

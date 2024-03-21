@@ -7,6 +7,8 @@ isa_ok($sites, 'Amazon::Sites');
 
 ok(my @sites = $sites->sites, 'Got some sites');
 ok(my %sites = $sites->sites_hash, 'sites_hash() gives a hash');
+use Data::Printer;
+diag(np %sites);
 isa_ok($sites{UK}, 'Amazon::Site');
 is($sites{UK}->tldn, 'co.uk', 'Correct tldn');
 ok(my $site  = $sites->site('UK'), 'site() gives a hash ref');
