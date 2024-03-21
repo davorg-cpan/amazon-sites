@@ -1,3 +1,5 @@
+package Amazon::Sites;
+
 =head1 NAME
 
 Amazon::Sites - A class to represent Amazon sites
@@ -27,7 +29,7 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 class Amazon::Sites {
   use Amazon::Site;
