@@ -101,16 +101,25 @@ Returns a list of the two-letter country codes, sorted by the sort order.
 1;
 
 __DATA__
-AU Australia com.au AUD 1
-BR Brazil com.br BRL 2
-CA Canada ca CAD 3
-DE Germany de EUR 4
-ES Spain es EUR 5
-FR France fr EUR 6
-IN India in INR 7
-IT Italy it EUR 8
-JP Japan co.jp BRL 9
-MX Mexico com.mx MXN 10
-NL Netherlands nl EUR 11
-UK UK co.uk GBP 12
-US USA com USD 13
+AE UAE ae AED 1
+AU Australia com.au AUD 2
+BE Belgium be EUR 3
+BR Brazil com.br BRL 4
+CA Canada ca CAD 5
+CN China cn CNY 6
+DE Germany de EUR 7
+EG Egypt eg EGP 8
+ES Spain es EUR 9
+FR France fr EUR 10
+IN India in INR 11
+IT Italy it EUR 12
+JP Japan co.jp JPY 13
+MX Mexico com.mx MXN 14
+NL Netherlands nl EUR 15
+PL Poland pl PLN 16
+SA SA sa  SAR 17
+SE Sweden se SEK 18
+SG Singapore sg SGD 19
+TR Turkey com.tr TRY 20
+UK UK co.uk GBP 21
+US USA com USD 22
