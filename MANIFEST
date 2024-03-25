@@ -1,11 +1,11 @@
 lib/Amazon/Site.pm
 lib/Amazon/Sites.pm
-Makefile
 Makefile.PL
 MANIFEST
 MANIFEST.SKIP
 MYMETA.json
 MYMETA.yml
+README.md
 t/00-load.t
 t/01-basic.t
 t/pod.t
