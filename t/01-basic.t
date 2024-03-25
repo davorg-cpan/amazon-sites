@@ -14,6 +14,6 @@ is($site->tldn, 'co.uk', 'Correct tldn');
 is($site->domain, 'amazon.co.uk', 'Correct domain');
 
 my @codes = $sites->codes;
-is_deeply(\@codes, [qw(AU BR CA DE ES FR IN IT JP MX NL UK US)]);
+is_deeply(\@codes, [qw(AE AU BE BR CA CN DE EG ES FR IN IT JP MX NL PL SA SE SG TR UK US)]);
 
 done_testing;
