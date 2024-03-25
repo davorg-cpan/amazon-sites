@@ -1,3 +1,4 @@
+ChangeLog.md
 lib/Amazon/Site.pm
 lib/Amazon/Sites.pm
 Makefile.PL
