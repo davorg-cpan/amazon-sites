@@ -1,7 +1,9 @@
 .vscode/
+*.code-workspace
 MYMETA.*
 Makefile
 Amazon-Sites*/
+Amazon-Sites*.tar*
 *.bak
 blib/
 pm_to_blib
