@@ -33,7 +33,7 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.1.0';
+our $VERSION = '0.1.1';
 
 class Amazon::Sites {
   use Amazon::Site;
