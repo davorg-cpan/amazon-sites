@@ -120,7 +120,7 @@ Returns the sort order.
 
 =head2 assoc_code
 
-  Returns the Amazon Associate code for this site.
+Returns the Amazon Associate code for this site.
 
 =cut
 
@@ -128,9 +128,9 @@ Returns the sort order.
 
 =head2 asin_url($asin)
 
-  Returns the URL for the ASIN on this site.
+Returns the URL for the ASIN on this site.
 
-  If you've defined an associate code for this site, it will be included in the URL.
+If you've defined an associate code for this site, it will be included in the URL.
 
 =cut
 
