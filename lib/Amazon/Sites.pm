@@ -18,6 +18,10 @@ Amazon::Sites - A class to represent Amazon sites
   say $site->tldr;     # co.uk
   # etc
 
+  my %urls = $sites->asin_urls('XXXXXXX');
+  say $urls{UK}; # https://amazon.co.uk/dp/XXXXXXX
+  # etc
+
 =head1 DESCRIPTION
 
 A simple class that encapsulates information about Amazon sites.
@@ -62,6 +66,12 @@ You can also specify a list of sites to include or exclude:
 
 At most one of `include` or `exclude` can be specified.
 
+You can also specify a hash of associate codes:
+
+    my $sites = Amazon::Sites->new(assoc_codes => {
+      UK => 'My Associate Code',
+    });
+
 =head2 sites_hash
 
 Returns a hash where the keys are the two-letter country codes and the values are
@@ -87,10 +97,10 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
 
   method sites {
     my @sites = sort {
-      $sites{$a}->sort <=> $sites{$b}->sort;
-    } keys %sites;
+      $a->sort <=> $b->sort;
+    } values %sites;
 
-    return \@sites;
+    return @sites;
   }
 
   sub _init_sites($assoc_codes, $include, $exclude) {
@@ -125,7 +135,23 @@ Returns a list of the two-letter country codes, sorted by the sort order.
 
   method codes {
     return sort keys %sites;
-  } 
+  }
+
+=head2 asin_urls
+
+Given an ASIN, returns a hash where the keys are the two-letter country
+codes and the values are the corresponding ASIN URLs.
+
+=cut
+
+  method asin_urls ($asin) {
+    my %urls;
+    for my $site ($self->sites) {
+      $urls{$site->code} = $site->asin_url($asin);
+    }
+
+    return %urls;
+  }
 }
 
 1;
