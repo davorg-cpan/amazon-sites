@@ -9,5 +9,6 @@ MYMETA.yml
 README.md
 t/00-load.t
 t/01-basic.t
+t/02-include-exclude.t
 t/pod.t
 t/pod_coverage.t

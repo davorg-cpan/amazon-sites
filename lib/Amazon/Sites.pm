@@ -29,18 +29,37 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.0.5';
+our $VERSION = '0.1.0';
 
 class Amazon::Sites {
   use Amazon::Site;
 
-  field %sites = _init_sites();
+  field $include :param = [];
+  field $exclude :param = [];
+  field %sites = _init_sites($include, $exclude);
+
+  ADJUST {
+    if (@$include and @$exclude) {
+      die "You can't specify both include and exclude";
+    }
+  }
 
 =head1 METHODS
 
 =head2 new
 
 Creates a new Amazon::Sites object.
+
+    my $sites = Amazon::Sites->new;
+
+You can also specify a list of sites to include or exclude:
+
+    # Only include the US site
+    my $sites = Amazon::Sites->new(include => [ 'US' ]);
+    # Exclude the US site
+    my $sites = Amazon::Sites->new(exclude => [ 'US' ]);
+
+At most one of `include` or `exclude` can be specified.
 
 =head2 sites_hash
 
@@ -73,16 +92,24 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
     return \@sites;
   }
 
-  sub _init_sites {
+  sub _init_sites($include, $exclude) {
     my %sites;
     my @cols = qw[code country tldn currency sort];
+
+    my $where = tell DATA;
 
     while (<DATA>) {
       chomp;
       my %site;
       @site{@cols} = split;
+
+      next if @$include and not grep { $site{code} eq $_ } @$include;
+      next if @$exclude and grep { $site{code} eq $_ } @$exclude;
+
       $sites{$site{code}} = Amazon::Site->new(%site);
     }
+
+    seek DATA, $where, 0;
 
     return %sites;
   }
