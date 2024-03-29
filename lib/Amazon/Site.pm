@@ -95,6 +95,20 @@ Returns the sort order.
 
   method assoc_code { return $assoc_code }
 
+=head2 asin_url($asin)
+
+  Returns the URL for the ASIN on this site.
+
+  If you've defined an associate code for this site, it will be included in the URL.
+
+=cut
+
+  method asin_url($asin) {
+    my $url = 'https://' . $self->domain . "/dp/$asin";
+    $url .= "?tag=$assoc_code" if $assoc_code;
+
+    return $url;
+  }
 }
 
 1;
