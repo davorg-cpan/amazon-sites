@@ -16,8 +16,9 @@ Amazon::Site - A class to represent an Amazon site
     sort     => 1,
   );
 
-  print $site->tldn;   # co.uk
-  print $site->domain; # amazon.co.uk
+  say $site->tldn;   # co.uk
+  say $site->domain; # amazon.co.uk
+  say $site->asin_url('XXXXXXX'); # https://amazon.co.uk/dp/XXXXXXX
 
 =cut
 
@@ -39,6 +40,36 @@ class Amazon::Site {
 =head2 new
 
 Creates a new Amazon::Site object.
+
+=head3 Parameters
+
+=over 4
+
+=item code
+
+The two-letter country code.
+
+=item country
+
+The country name.
+
+=item tldn
+
+The top-level domain name.
+
+=item currency
+
+The currency code.
+
+=item sort
+
+The sort order. Used by Amazon::Sites to sort the sites.
+
+=item assoc_code
+
+The optional Amazon Associate code for this site.
+
+=back
 
 =head2 code
 
