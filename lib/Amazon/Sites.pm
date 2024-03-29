@@ -36,7 +36,8 @@ class Amazon::Sites {
 
   field $include :param = [];
   field $exclude :param = [];
-  field %sites = _init_sites($include, $exclude);
+  field $assoc_codes :param = {};
+  field %sites = _init_sites($assoc_codes, $include, $exclude);
 
   ADJUST {
     if (@$include and @$exclude) {
@@ -92,7 +93,7 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
     return \@sites;
   }
 
-  sub _init_sites($include, $exclude) {
+  sub _init_sites($assoc_codes, $include, $exclude) {
     my %sites;
     my @cols = qw[code country tldn currency sort];
 
@@ -105,6 +106,8 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
 
       next if @$include and not grep { $site{code} eq $_ } @$include;
       next if @$exclude and grep { $site{code} eq $_ } @$exclude;
+
+      $site{assoc_code} = $assoc_codes->{$site{code}} if $assoc_codes->{$site{code}};
 
       $sites{$site{code}} = Amazon::Site->new(%site);
     }

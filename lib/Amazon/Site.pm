@@ -32,6 +32,7 @@ class Amazon::Site {
   field $tldn :param;
   field $currency :param;
   field $sort :param;
+  field $assoc_code :param = '';
 
 =head1 METHODS
 
@@ -85,6 +86,15 @@ Returns the sort order.
 =cut
 
   method sort     { return $sort }
+
+=head2 assoc_code
+
+  Returns the Amazon Associate code for this site.
+
+=cut
+
+  method assoc_code { return $assoc_code }
+
 }
 
 1;
