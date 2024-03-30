@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - "assoc_codes" option to define associate codes associated with sites
 
-= `asin_url()` method to site object
+- `asin_url()` method to site object
 
 ## [0.0.5] - 2024-03-25
 
