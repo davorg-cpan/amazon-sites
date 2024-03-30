@@ -142,4 +142,22 @@ If you've defined an associate code for this site, it will be included in the UR
   }
 }
 
+=head1 COPYRIGHT
+
+Copyright 2024, Dave Cross. All rights reserved.
+
+=head1 LICENCE
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of either:
+
+=over 4
+
+=item * the GNU General Public License as published by the Free Software
+Foundation; either version 1, or (at your option) any later version, or
+
+=item * the Artistic License version 2.0.
+
+=back
+
 1;
