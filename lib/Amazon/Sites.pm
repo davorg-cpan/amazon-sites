@@ -174,6 +174,8 @@ Foundation; either version 1, or (at your option) any later version, or
 
 =back
 
+=cut
+
 __DATA__
 AE UAE ae AED 1
 AU Australia com.au AUD 2

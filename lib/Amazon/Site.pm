@@ -160,4 +160,6 @@ Foundation; either version 1, or (at your option) any later version, or
 
 =back
 
+=cut
+
 1;
