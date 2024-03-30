@@ -7,9 +7,9 @@ sites.
 
 Hopefully, these are all green.
 
-([![CI](https://github.com/davorg-cpan/amazon-sites/actions/workflows/perltest.yml/badge.svg)](https://github.com/davorg-cpan/amazon-sites/actions/workflows/perltest.yml))
+[![CI](https://github.com/davorg-cpan/amazon-sites/actions/workflows/perltest.yml/badge.svg)](https://github.com/davorg-cpan/amazon-sites/actions/workflows/perltest.yml)
 [![Coverage Status](https://coveralls.io/repos/github/davorg-cpan/amazon-sites/badge.svg?branch=main)](https://coveralls.io/github/davorg-cpan/amazon-sites?branch=main)
-![Kwality](https://cpants.cpanauthors.org/release/DAVECROSS/Amazon-Sites.svg "Kwality")
+[![Kwality](https://cpants.cpanauthors.org/release/DAVECROSS/Amazon-Sites.svg "Kwality")](https://cpants.cpanauthors.org/release/DAVECROSS/Amazon-Sites)
 
 ## Example
 
