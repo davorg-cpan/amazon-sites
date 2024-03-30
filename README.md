@@ -61,7 +61,7 @@ The code is maintained on GitHub.
 
 All issues are tracked on GitHub:
 
-* https://github.com/davorg-cpan/amazon-sites
+* https://github.com/davorg-cpan/amazon-sites/issues
 
 ## Author
 
