@@ -22,6 +22,9 @@ Amazon::Site - A class to represent an Amazon site
 
 =cut
 
+use strict;
+use warnings;
+
 use Feature::Compat::Class;
 
 use feature 'signatures';

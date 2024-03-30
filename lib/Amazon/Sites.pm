@@ -28,6 +28,9 @@ A simple class that encapsulates information about Amazon sites.
 
 =cut
 
+use strict;
+use warnings;
+
 use Feature::Compat::Class;
 
 use feature 'signatures';
