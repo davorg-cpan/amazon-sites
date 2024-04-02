@@ -36,7 +36,7 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.1.4';
+our $VERSION = '0.1.5';
 
 class Amazon::Sites {
   use Amazon::Site;
@@ -182,7 +182,7 @@ Foundation; either version 1, or (at your option) any later version, or
 __DATA__
 AE UAE ae AED 1
 AU Australia com.au AUD 2
-BE Belgium be EUR 3
+BE Belgium com.be EUR 3
 BR Brazil com.br BRL 4
 CA Canada ca CAD 5
 CN China cn CNY 6
