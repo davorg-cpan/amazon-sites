@@ -115,7 +115,7 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
     while (<DATA>) {
       chomp;
       my %site;
-      @site{@cols} = split;
+      @site{@cols} = split /\t/;
 
       next if @$include and not grep { $site{code} eq $_ } @$include;
       next if @$exclude and grep { $site{code} eq $_ } @$exclude;
@@ -180,25 +180,25 @@ Foundation; either version 1, or (at your option) any later version, or
 =cut
 
 __DATA__
-AE UAE ae AED 1
-AU Australia com.au AUD 2
-BE Belgium com.be EUR 3
-BR Brazil com.br BRL 4
-CA Canada ca CAD 5
-CN China cn CNY 6
-DE Germany de EUR 7
-EG Egypt eg EGP 8
-ES Spain es EUR 9
-FR France fr EUR 10
-IN India in INR 11
-IT Italy it EUR 12
-JP Japan co.jp JPY 13
-MX Mexico com.mx MXN 14
-NL Netherlands nl EUR 15
-PL Poland pl PLN 16
-SA SA sa  SAR 17
-SE Sweden se SEK 18
-SG Singapore sg SGD 19
-TR Turkey com.tr TRY 20
-UK UK co.uk GBP 21
-US USA com USD 22
+AE	UAE	ae	AED	1
+AU	Australia	com.au	AUD	2
+BE	Belgium	com.be	EUR	3
+BR	Brazil	com.br	BRL	4
+CA	Canada	ca	CAD	5
+CN	China	cn	CNY	6
+DE	Germany	de	EUR	7
+EG	Egypt	eg	EGP	8
+ES	Spain	es	EUR	9
+FR	France	fr	EUR	10
+IN	India	in	INR	11
+IT	Italy	it	EUR	12
+JP	Japan	co.jp	JPY	13
+MX	Mexico	com.mx	MXN	14
+NL	Netherlands	nl	EUR	15
+PL	Poland	pl	PLN	16
+SA	Saudi Arabia	sa	SAR	17
+SE	Sweden	se	SEK	18
+SG	Singapore	sg	SGD	19
+TR	Turkey	com.tr	TRY	20
+UK	United Kingdom	co.uk	GBP	21
+US	USA	com	USD	22
