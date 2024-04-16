@@ -39,7 +39,7 @@ no warnings 'experimental::signatures';
 our $VERSION = '0.1.6';
 
 class Amazon::Sites {
-  use Amazon::Site;
+  use Amazon::Site ();
 
   field $include :param = [];
   field $exclude :param = [];
