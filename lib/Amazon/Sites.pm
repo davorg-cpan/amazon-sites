@@ -40,10 +40,6 @@ our $VERSION = '0.1.7';
 
 class Amazon::Sites {
 
-BEGIN {
-  warn __PACKAGE__;
-}
-
   use Amazon::Site ();
 
   field $include :param = [];
