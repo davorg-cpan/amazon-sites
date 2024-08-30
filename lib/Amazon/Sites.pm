@@ -15,7 +15,7 @@ Amazon::Sites - A class to represent Amazon sites
 
   my $site  = $sites->site('UK');
   say $site->currency; # GBP
-  say $site->tldr;     # co.uk
+  say $site->tldn;     # co.uk
   # etc
 
   my %urls = $sites->asin_urls('XXXXXXX');
