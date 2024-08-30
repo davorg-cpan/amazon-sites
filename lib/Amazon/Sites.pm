@@ -1,3 +1,5 @@
+package Amazon::Sites;
+
 =head1 NAME
 
 Amazon::Sites - A class to represent Amazon sites
@@ -37,6 +39,11 @@ no warnings 'experimental::signatures';
 our $VERSION = '0.1.7';
 
 class Amazon::Sites {
+
+BEGIN {
+  warn __PACKAGE__;
+}
+
   use Amazon::Site ();
 
   field $include :param = [];
