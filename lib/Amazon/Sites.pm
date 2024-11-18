@@ -1,5 +1,3 @@
-package Amazon::Sites;
-
 =head1 NAME
 
 Amazon::Sites - A class to represent Amazon sites
@@ -111,9 +109,9 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
     my %sites;
     my @cols = qw[code country tldn currency sort];
 
-    my $where = tell DATA;
+    my $where = tell main::DATA;
 
-    while (<DATA>) {
+    while (<main::DATA>) {
       chomp;
       my %site;
       @site{@cols} = split /\t/;
@@ -126,7 +124,7 @@ Returns a list of L<Amazon::Site> objects, sorted by the sort order.
       $sites{$site{code}} = Amazon::Site->new(%site);
     }
 
-    seek DATA, $where, 0;
+    seek main::DATA, $where, 0;
 
     return %sites;
   }
