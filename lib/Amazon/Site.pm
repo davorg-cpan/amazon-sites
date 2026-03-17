@@ -28,6 +28,8 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
+our $VERSION = '0.1.10';
+
 class Amazon::Site {
   field $code :param;
   field $country :param;
