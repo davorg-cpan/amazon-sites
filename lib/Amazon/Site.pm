@@ -29,7 +29,7 @@ use feature 'signatures';
 no warnings 'experimental::signatures';
 
 class Amazon::Site {
-  our $VERSION = 'v0.1.10';
+  our $VERSION = '0.1.10';
 
   field $code :param;
   field $country :param;

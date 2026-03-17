@@ -36,7 +36,7 @@ no warnings 'experimental::signatures';
 
 class Amazon::Sites;
 
-our $VERSION = 'v0.1.10';
+our $VERSION = '0.1.10';
 
 use Amazon::Site ();
 
