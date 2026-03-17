@@ -28,9 +28,9 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.1.10';
-
 class Amazon::Site {
+  our $VERSION = 'v0.1.10';
+
   field $code :param;
   field $country :param;
   field $tldn :param;
