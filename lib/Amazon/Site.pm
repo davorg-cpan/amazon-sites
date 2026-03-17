@@ -138,12 +138,11 @@ If you've defined an associate code for this site, it will be included in the UR
 
 =cut
 
-  method asin_url($asin) {
-    my $url = 'https://' . $self->domain . "/dp/$asin";
-    $url .= "?tag=$assoc_code" if $assoc_code;
+method asin_url($asin) {
+  my $url = 'https://' . $self->domain . "/dp/$asin";
+  $url .= "?tag=$assoc_code" if $assoc_code;
 
-    return $url;
-  }
+  return $url;
 }
 
 =head1 COPYRIGHT
