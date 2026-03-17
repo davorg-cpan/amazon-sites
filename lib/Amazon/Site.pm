@@ -20,6 +20,8 @@ Amazon::Site - A class to represent an Amazon site
 
 =cut
 
+package Amazon::Site;
+
 use strict;
 use warnings;
 
@@ -28,7 +30,7 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-our $VERSION = '0.1.10';
+our $VERSION = 'v0.1.10';
 
 class Amazon::Site {
   field $code :param;
