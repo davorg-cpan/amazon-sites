@@ -28,15 +28,16 @@ use Feature::Compat::Class;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 
-class Amazon::Site {
-  our $VERSION = '0.1.10';
+class Amazon::Site;
 
-  field $code :param;
-  field $country :param;
-  field $tldn :param;
-  field $currency :param;
-  field $sort :param;
-  field $assoc_code :param = '';
+our $VERSION = '0.1.10';
+
+field $code :param;
+field $country :param;
+field $tldn :param;
+field $currency :param;
+field $sort :param;
+field $assoc_code :param = '';
 
 =head1 METHODS
 
